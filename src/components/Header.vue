@@ -62,16 +62,14 @@
         },
         methods: {
             //ToDo: Create ...mapActions method
-                //ToDo: Call randomizeStocks: 'randomizeStocks**'
-                //ToDo: Call fetchData: 'loadData**'
-            mapActions(){
-
-            },
+                //ToDo: Call randomizeStocks: 'randomizeStocks'
+                //ToDo: Call fetchData: 'loadData'
+            ...mapActions({randomizeStocks: 'randomizeStocks', fetchData: 'loadData'}),
 
             //ToDo: Create endDay method
                 //ToDo: Call randomizeStocks()
             endDay(){
-                randomizeStocks()
+                this.randomizeStocks()
             },
 
             //ToDo: Create SaveData** method
@@ -81,8 +79,17 @@
                     //ToDo: Set stocks: to the $store getters stocks
                 //ToDo: Outside the data object use $http, using .put pass 'data.json' and the data object
             saveData(){
-                const data = {}
+                const data = {
+                    funds: this.$store.getters.funds,
+                    stockPortfolio: this.$store.getters.stockPortfolio,
+                    stocks: this.$store.getters.stocks
+                }
 
+                this.$http.put('data.json', data)
+
+            },
+            loadData(){
+                this.fetchData()
             }
 
             //ToDo: Create loadData method

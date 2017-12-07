@@ -41,7 +41,7 @@
 
 <script>
     //ToDo: Import mapActions from vuex
-    import mapActions from 'vuex'
+    import { mapActions } from 'vuex'
 
     export default {
         //ToDo: Set props equal to stock using array syntax

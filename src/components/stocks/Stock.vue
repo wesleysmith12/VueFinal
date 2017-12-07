@@ -54,7 +54,7 @@
             //ToDo: Create a computed function called funds
                 //ToDo: Have funds() return $store.getters.funds
             funds() {
-                return $store.getters.funds
+                return this.$store.getters.funds
             },
 
             //ToDo: Create a computed function called insufficientFunds
