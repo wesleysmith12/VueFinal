@@ -20,7 +20,7 @@
     export default {
         //ToDo: Initialize Header component and name it appHeader
 
-        //ToDo: On page creation dispatch 'initStocks' to the vuex $store***
+        //ToDo: On page creation dispatch 'initStocks' to the vuex $store*
 
         data() {
 
@@ -30,6 +30,9 @@
         },
         components: {
             appHeader: Header
+        },
+        created: function () {
+            this.$store.dispatch('initStocks')
         }
 
     }

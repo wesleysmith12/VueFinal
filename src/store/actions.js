@@ -21,7 +21,9 @@ export const loadData = ({commit}) => {
                 }
 
                 //ToDo: using vuex commit method pass 'SET_STOCKS' and stocks*
+                this.$store.commit('SET_STOCKS', stocks)
                 //ToDo: using vuex commit method pass 'SET_PORTFOLIO' and portfolio*
+                this.$store.commit('SET_Portfolio', portfolio)
             }
         });
 };

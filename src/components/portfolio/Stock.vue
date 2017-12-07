@@ -12,7 +12,7 @@
             <div class="panel-body">
                 <div class="pull-left">
                     <!--ToDo: Inside input use v-model.number and pass quantity-->
-                        <!--ToDo: Bind to class using : and pass object called danger that takes in insufficientQuantity*-->
+                        <!--ToDo: Bind to class using : and pass object called danger that takes in insufficientQuantity-->
                     <input
                             type="number"
                             class="form-control"
@@ -22,9 +22,9 @@
                 </div>
                 <div class="pull-right">
                     <!--ToDo: Inside the button add a click event that calls sellStock-->
-                        <!--ToDo: Bind to disabled using : and set it equal to insufficientQuantity || quantity is less than or equal to 0 || !Number.isInteger(quantity)*-->
+                        <!--ToDo: Bind to disabled using : and set it equal to insufficientQuantity || quantity is less than or equal to 0 || !Number.isInteger(quantity)-->
                     <button class="btn btn-success" @click="sellstock" :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)">
-                        <!--ToDo: Display insufficientQuantity data object and add if using ? 'Not Enough' else 'Sell'*-->
+                        <!--ToDo: Display insufficientQuantity data object and add if using ? 'Not Enough' else 'Sell'-->
                         {{ insufficientQuantity ? 'Not Enough' : 'Sell' }}
                     </button>
                 </div>
@@ -45,7 +45,7 @@
 
     export default {
         //ToDo: Set props equal to stock using array syntax
-        props: [stock],
+        props: ['stock'],
 
         data() {
             return {
@@ -61,11 +61,11 @@
             }
         },
         methods: {
-            //ToDo: Create ...mapActions method*
+            //ToDo: Create ...mapActions method
                 //ToDo: Call placeSellOrder: 'sellStock'
-            mapActions() {
-                //placeSellOrder: 'sellStock'
-            },
+            ...mapActions({
+                placeSellOrder: 'sellStock'
+            }),
 
             //ToDo: Create sellStock method
                 //ToDo: Create const called order that holds an object
@@ -81,7 +81,7 @@
                     quantity: this.quantity
                 }
 
-                placeSellOrder(order)
+                this.placeSellOrder(order)
 
                 this.quantity = 0
             }
