@@ -7,7 +7,7 @@ export const loadData = ({commit}) => {
         .then(data => {
             if (data) {
                 // ToDo: Create const call stocks that is equal to data.stocks
-                const ctocks = data.stocks
+                const stocks = data.stocks
                 // ToDo: Create const call funds that is equal to data.funds
                 const funds = data.funds
                 // ToDo: Create const call stockPortfolio that is equal to data.stockPortfolio
@@ -23,7 +23,7 @@ export const loadData = ({commit}) => {
                 //ToDo: using vuex commit method pass 'SET_STOCKS' and stocks*
                 this.$store.commit('SET_STOCKS', stocks)
                 //ToDo: using vuex commit method pass 'SET_PORTFOLIO' and portfolio*
-                this.$store.commit('SET_Portfolio', portfolio)
+                this.$store.commit('SET_PORTFOLIO', portfolio)
             }
         });
 };

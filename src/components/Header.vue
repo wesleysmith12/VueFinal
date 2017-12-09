@@ -9,11 +9,12 @@
                 <ul class="nav navbar-nav">
                     <!--ToDo: Create router-link that goes to '/portfolio'
                         <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Portfolio text-->
-                    <router-link to="/portfolio" active-class="active" tag="li">Portfolio</router-link>
+                    <router-link tag="li" to="/portfolio" :active-class="active"><a>Portfolio</a></router-link>
 
                     <!--ToDo: Create router-link that goes to '/stocks'
                         <!--ToDo: set activeClass to "active", add tag attribute set to li, and add Stocks text-->
-                    <router-link to="/stocks" active-class="active" tag="li">Stocks</router-link>
+                    <router-link tag="li" to="/stocks" :active-class="active"><a>Stocks</a></router-link>
+
                 </ul>
                 <strong class="navbar-text navbar-right">Funds:
                     <!--ToDo: Call funds computed function and pipe the currency filter that is created in main.js-->
@@ -27,7 +28,7 @@
 
                     <!--ToDo: Inside <li> Bind to class using :class that passes an object {} called open and set it to isDropdownOpen**-->
                         <!--ToDo: Add click event that toggles isDropdownOpen to true and false-->
-                    <li :class="open" @click="isDropdownOpen = !isDropdownOpen" class="dropdown">
+                    <li :class="{ open: isDropdownOpen }" @click="isDropdownOpen = !isDropdownOpen" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Save & Load <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <!--ToDo: Add click event that calls the saveData method-->
