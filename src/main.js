@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'  //ToDo: Import vue-router and name it VueRou
 import VueResource from 'vue-resource'  //ToDo: Import vue-resource and name it VueResource
 
 import App from './App.vue' //ToDo: Import App.vue and name it App
-import { routes } from './routes' //ToDo: Import routes.js and use the {} passing routes
+import { routes } from './routes.js' //ToDo: Import routes.js and use the {} passing routes #added .js
 import store from './store/store.js' //ToDo: Import store/store.js and name it store
 
 Vue.use(VueRouter); //ToDo Initialize VueRouter using Vue.use()
@@ -17,7 +17,7 @@ Vue.filter('currency', (value) => {
 
 const router = new VueRouter({
     mode: 'history',//ToDo: Set router mode to history
-    routes  //ToDo: Pass routes constant imported from above
+    routes  //ToDo: Pass routes constant imported from above ## here
 });
 
 new Vue({

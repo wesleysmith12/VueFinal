@@ -73,7 +73,7 @@
             //ToDo: Reset quantity to 0
             buyStock() {
                 const order = {
-                    stockID: this.stockId,
+                    stockID: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 }
