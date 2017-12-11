@@ -18,7 +18,7 @@
                             type="number"
                             class="form-control"
                             placeholder="Quantity"
-                            :class="{danger: 'insufficientFunds'}">
+                            :class="{danger: insufficientFunds}">
                 </div>
                 <div class="pull-right">
                     <!--ToDo: Inside the button add a click event that calls buyStock-->

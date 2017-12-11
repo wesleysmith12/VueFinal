@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">
                     <!--ToDo: Display the stock.name data object-->
-                    {{ stock.name }} 123
+                    {{ stock.name }}
                     <!--ToDo: Inside <small> tags display Price: stock.price | Quantity stock.quantity-->
                     <small>{{ stock.price }} | Quantity {{ stock.quantity }}</small>
                 </h3>

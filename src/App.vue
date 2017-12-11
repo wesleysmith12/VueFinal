@@ -37,13 +37,47 @@
     }
 
     /*ToDo: Create slide-in effect for enter-active*/
+    .slide-enter-active {
+        animation: slide-in 0.5s ease-out forwards;
+    }
     /*ToDo: Create slide-in effect for enter-leave*/
-
+    .slide-leave-active {
+        animation: slide-out 0.5s ease-out forwards;
+    }
     /*ToDo: Create Keyframes for slide-in, remember to include from and to*/
-        /*You can use any settings*/
+    /*You can use any settings*/
+    @keyframes slide-in {
+        from {
+            transform: translateY(20px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide-out {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(20px);
+        }
+    }
 
     /*ToDo: Create Keyframes for slide-out, remember to include from and to*/
-        /*You can use any settings*/
+    /*You can use any settings*/
+    @keyframes slide-in {
+        from {
+            -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+            opacity: 0;
+        }
+        to {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
 </style>
 
