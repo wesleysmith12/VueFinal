@@ -60,7 +60,6 @@ const actions = {
     }
 }
 
-
 //*ToDo: Create const called getters that is a data object{}
     //ToDo: Inside getters object create stockPortfolio method that takes two parameters (state, getters)
         //ToDo: return state.stocks.map() that is a pointer function that passes stock
@@ -75,7 +74,7 @@ const actions = {
 const getters = {
     stockPortfolio: ( state, getters ) => {
 
-        return state.stocks.map((stock) => {
+        return getters.stocks.map((stock) => {
 
             const record = state.stocks.find(element => element.id == stock.id)
 
